@@ -2,7 +2,7 @@
   "name": "typescript-express",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,9 +17,13 @@
     "ts-node-dev": "^1.0.0-pre.40",
     "typescript": "^3.5.2"
   },
+  "engines": {
+    "node": "8.11.4"
+  },
   "scripts": {
-    "tsc": "tsc",
-    "serve": "set debug=* && ts-node-dev --ignore-watch node_modules --respawn --transpileOnly ./src/index.ts",
-    "build": "tsc && node ./build/index.js"
+    "build": "tsc",
+    "postinstall": "npm run build",
+    "build-tsc": "tsc",
+    "serve": "set debug=* && ts-node-dev --ignore-watch node_modules --respawn --transpileOnly ./src/index.ts"
   }
 }
