@@ -1,0 +1,25 @@
+{
+  "name": "typescript-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^12.0.10",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.18.0"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.40",
+    "typescript": "^3.5.2"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "serve": "set debug=* && ts-node-dev --ignore-watch node_modules --respawn --transpileOnly ./src/index.ts",
+    "build": "tsc && node ./build/index.js"
+  }
+}
