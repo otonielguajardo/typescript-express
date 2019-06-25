@@ -23,7 +23,6 @@
   "scripts": {
     "build": "tsc",
     "postinstall": "npm run build",
-    "build-tsc": "tsc",
     "serve": "set debug=* && ts-node-dev --ignore-watch node_modules --respawn --transpileOnly ./src/index.ts"
   }
 }
